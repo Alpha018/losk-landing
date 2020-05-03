@@ -156,7 +156,7 @@
     ],
     "no-with": "warn",
     "no-whitespace-before-property": "warn",
-    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/exhaustive-deps": "off",
     "require-yield": "warn",
     "rest-spread-spacing": ["warn", "never"],
     "strict": ["warn", "never"],
@@ -198,10 +198,7 @@
     "jsx-a11y/accessible-emoji": "warn",
     "jsx-a11y/alt-text": "warn",
     "jsx-a11y/anchor-has-content": "warn",
-    "jsx-a11y/anchor-is-valid": [
-      "warn",
-      { "aspects": ["noHref", "invalidHref"] }
-    ],
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["noHref", "invalidHref"] }],
     "jsx-a11y/aria-activedescendant-has-tabindex": "warn",
     "jsx-a11y/aria-props": "warn",
     "jsx-a11y/aria-proptypes": "warn",
@@ -240,7 +237,14 @@
       { "args": "none", "ignoreRestSiblings": true }
     ],
     "no-useless-constructor": "off",
-    "@typescript-eslint/no-useless-constructor": "warn"
+    "@typescript-eslint/no-useless-constructor": "warn",
+
+    // Custom rules
+    "max-len": ["error", { "code": 90, "ignoreUrls": true }],
+    "no-console": "error",
+    "object-curly-spacing": ["error", "always"],
+    "semi": ["error", "never"],
+    "indent": ["error", 2, { "SwitchCase": 1 }]
   },
   "extends": ["../../.eslintrc"],
   "ignorePatterns": ["!**/*"]
